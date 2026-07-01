@@ -23,8 +23,9 @@
             .cta-secondary { display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem 1.2rem; border-radius: 999px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); color: #c8d6ff; text-decoration: none; transition: background 0.2s ease; }
             .cta-secondary:hover { background: rgba(255,255,255,0.12); }
             .hero { display: grid; gap: 32px; align-items: start; grid-template-columns: 1.1fr 0.95fr; padding-top: 16px; }
-            .hero-copy h1 { margin: 0; font-size: clamp(2.6rem, 5vw, 4.2rem); letter-spacing: 0.08em; line-height: 1.05; }
-            .hero-copy p { max-width: 700px; font-size: 1.05rem; color: #d8e3ff; line-height: 1.75; margin: 24px 0 0; }
+            .hero-copy .hero-brand { margin: 0; font-size: clamp(3.6rem, 7vw, 5.8rem); letter-spacing: 0.18em; line-height: 1; font-weight: 900; text-transform: uppercase; }
+            .hero-copy .hero-tagline { max-width: 760px; margin: 18px 0 0; font-size: 1.08rem; color: #d8e3ff; line-height: 1.85; letter-spacing: 0.01em; }
+            .hero-copy p { max-width: 700px; font-size: 1rem; color: #d8e3ff; line-height: 1.75; margin: 20px 0 0; }
             .hero-copy .hero-meta { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 16px; }
             .hero-copy .hero-pill { background: rgba(74,158,232,0.18); color: #a2c5ff; padding: 0.8rem 1rem; border-radius: 999px; font-weight: 600; letter-spacing: 0.12em; font-size: 0.82rem; }
             .section { margin-top: 56px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.12); scroll-margin-top: 120px; }
@@ -71,9 +72,9 @@
             .hero-logo { min-height: 420px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; border-radius: 28px; overflow: hidden; background: linear-gradient(180deg, #071426 0%, #041123 100%); box-shadow: 0 28px 60px rgba(1, 20, 45, 0.35); }
             .hero-logo canvas { width: 100%; height: auto; max-height: 420px; display: block; }
             .hero-logo .logo-text { padding: 22px 22px 28px; text-align: center; }
-            .hero-logo .logo-text .brand { font-size: 2rem; font-weight: 700; letter-spacing: 0.22em; color: #eef4ff; }
+            .hero-logo .logo-text .brand { font-size: 2.6rem; font-weight: 900; letter-spacing: 0.22em; color: #eef4ff; text-transform: uppercase; }
             .hero-logo .logo-text .brand span { color: #4a9ee8; }
-            .hero-logo .logo-text .tag { margin-top: 8px; color: #8fa8ce; font-size: 0.86rem; letter-spacing: 0.18em; }
+            .hero-logo .logo-text .tag { margin-top: 8px; color: #8fa8ce; font-size: 0.95rem; letter-spacing: 0.22em; text-transform: uppercase; }
             .contact-widget { position: fixed; right: 22px; bottom: 24px; display: grid; gap: 12px; z-index: 30; }
             .contact-widget a { display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; padding: 0; border-radius: 18px; text-decoration: none; color: #ffffff; backdrop-filter: blur(12px); box-shadow: 0 18px 40px rgba(0,0,0,0.25); transition: transform 0.2s ease, box-shadow 0.2s ease; }
             .contact-widget a:hover { transform: translateY(-2px); box-shadow: 0 20px 48px rgba(0,0,0,0.3); }
@@ -112,10 +113,10 @@
             <div class="page-inner">
                 <div class="hero" id="home">
                     <div class="hero-copy">
-                        <div class="badge">MatterTech</div>
-                        <h1>Platform WMS terintegrasi untuk pengusaha UMKM Malang naik kelas.</h1>
+                        <h1 class="hero-brand">MATTER<span style="color:#4a9ee8;">TECH</span></h1>
+                        <p class="hero-tagline">Solusi manajemen gudang terintegrasi untuk UMKM dan distributor yang ingin naik kelas dengan operasi yang cepat, akurat, dan mudah digunakan.</p>
                         <p>MatterTech membantu distributor, grosir, dan pelaku F&B mengelola stok, relasi pemasok, dan distribusi secara digital dengan cara yang praktis dan terjangkau.</p>
-                        <p>Kami fokus mengurangi waktu admin 60-70%, memperbaiki akurasi stok hingga 95%, dan membuat proses gudang serta hubungan B2B lebih rapi dan real-time.</p>
+                        <p>Kami fokus mengurangi waktu admin 60-70%, memperbaiki akurasi stok hingga 95%, dan menyederhanakan proses gudang serta hubungan B2B secara real-time.</p>
                         <div class="hero-meta">
                             <div class="hero-pill">UI mobile-first</div>
                             <div class="hero-pill">Dashboard real-time</div>

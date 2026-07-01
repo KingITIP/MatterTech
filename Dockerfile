@@ -18,8 +18,11 @@ RUN docker-php-ext-configure gd --with-jpeg --with-freetype \
     && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd opcache zip
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+ENV COMPOSER_ALLOW_SUPERUSER=1 \
+    COMPOSER_MEMORY_LIMIT=-1
+
 COPY composer.json composer.lock ./
-RUN composer install --no-dev --no-interaction --optimize-autoloader --prefer-dist
+RUN composer install --no-dev --no-interaction --optimize-autoloader --prefer-dist --ignore-platform-reqs
 
 FROM php:8.3-fpm-alpine
 WORKDIR /var/www/html
