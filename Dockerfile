@@ -13,7 +13,7 @@ RUN npm run build
 FROM php:8.3-cli-alpine AS composer-builder
 WORKDIR /var/www/html
 
-RUN apk add --no-cache bash git icu-dev libxml2-dev oniguruma-dev libpng-dev libjpeg-turbo-dev freetype-dev zlib-dev libzip-dev curl zip unzip
+RUN apk add --no-cache bash git icu-dev libxml2-dev oniguruma-dev libpng-dev libjpeg-turbo-dev freetype-dev zlib-dev libzip-dev curl zip unzip build-base autoconf
 RUN docker-php-ext-configure gd --with-jpeg --with-freetype \
     && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd opcache zip
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
@@ -24,7 +24,7 @@ RUN composer install --no-dev --no-interaction --optimize-autoloader --prefer-di
 FROM php:8.3-fpm-alpine
 WORKDIR /var/www/html
 
-RUN apk add --no-cache bash git icu-dev libxml2-dev oniguruma-dev libpng-dev libjpeg-turbo-dev freetype-dev zlib-dev libzip-dev curl zip unzip
+RUN apk add --no-cache bash git icu-dev libxml2-dev oniguruma-dev libpng-dev libjpeg-turbo-dev freetype-dev zlib-dev libzip-dev curl zip unzip build-base autoconf
 RUN docker-php-ext-configure gd --with-jpeg --with-freetype \
     && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd opcache zip \
     && pecl install apcu \
